@@ -166,9 +166,9 @@ class Interfacecpfsynctrigger
         } 
 		
 		// Supplier price
-		elseif (!empty($conf->global->CPFSYNC_SHARE_PRODUCT) && ($action == 'SUPPLIER_PRODUCT_BUYPRICE_UPDATE' || $action == 'SUPPLIER_PRODUCT_BUYPRICE_REMOVE'))
+		elseif (!empty($conf->global->CPFSYNC_SHARE_PRODUCT) && ($action == 'SUPPLIER_PRODUCT_BUYPRICE_UPDATE' || $action == 'SUPPLIER_PRODUCT_BUYPRICE_DELETE'))
 		{
-			if ($action == 'SUPPLIER_PRODUCT_BUYPRICE_REMOVE')
+			if ($action == 'SUPPLIER_PRODUCT_BUYPRICE_DELETE')
 			{
 				$object->fetch_product_fournisseur_price(GETPOST('rowid'));
 				
